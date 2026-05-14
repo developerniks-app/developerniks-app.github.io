@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Terms of Service | Drink Water Reminder</title>
+
+    <meta name="description" content="Terms of Service for Drink Water Reminder app by Nikhilesh Patve." />
+    <meta name="theme-color" content="#0ea5e9" />
+
+    <style>
+        :root {
+            --bg: #f4f8fb;
+            --card: #ffffff;
+            --text: #0f172a;
+            --muted: #475569;
+            --primary: #0ea5e9;
+            --border: #dbeafe;
+            --shadow: rgba(15, 23, 42, 0.08);
+        }
+
+        body.dark {
+            --bg: #020617;
+            --card: #0f172a;
+            --text: #e2e8f0;
+            --muted: #94a3b8;
+            --primary: #38bdf8;
+            --border: #1e293b;
+            --shadow: rgba(0, 0, 0, 0.4);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: Inter, Arial, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+            transition: background 0.25s ease, color 0.25s ease;
+        }
+
+        .container {
+            width: min(950px, 92%);
+            margin: auto;
+            padding: 40px 0 80px;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #0ea5e9, #2563eb);
+            color: white;
+            padding: 50px 35px;
+            border-radius: 24px;
+            box-shadow: 0 20px 50px rgba(37, 99, 235, 0.25);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::after {
+            content: "💧";
+            position: absolute;
+            right: 25px;
+            top: 10px;
+            font-size: 90px;
+            opacity: 0.12;
+        }
+
+        h1 {
+            margin: 0 0 12px;
+            font-size: clamp(2rem, 5vw, 3.2rem);
+        }
+
+        .subtitle {
+            font-size: 1.05rem;
+            opacity: 0.95;
+            max-width: 700px;
+        }
+
+        .effective-date {
+            margin-top: 18px;
+            font-weight: 600;
+        }
+
+        .topbar {
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 18px;
+        }
+
+        .theme-toggle {
+            border: none;
+            background: var(--card);
+            color: var(--text);
+            padding: 10px 16px;
+            border-radius: 999px;
+            cursor: pointer;
+            font-weight: 600;
+            box-shadow: 0 10px 30px var(--shadow);
+            transition: transform 0.2s ease;
+        }
+
+        .theme-toggle:hover {
+            transform: translateY(-2px);
+        }
+
+        .card {
+            background: var(--card);
+            border-radius: 22px;
+            padding: 32px;
+            margin-top: 24px;
+            border: 1px solid var(--border);
+            box-shadow: 0 10px 30px var(--shadow);
+        }
+
+        h2 {
+            margin-top: 0;
+            color: var(--primary);
+            font-size: 1.5rem;
+        }
+
+        p {
+            color: var(--muted);
+        }
+
+        ul {
+            color: var(--muted);
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            color: var(--muted);
+            font-size: 0.95rem;
+        }
+
+        .badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.15);
+            padding: 8px 14px;
+            border-radius: 999px;
+            margin-top: 16px;
+            font-size: 0.92rem;
+        }
+
+        .highlight {
+            background: rgba(14, 165, 233, 0.12);
+            padding: 2px 8px;
+            border-radius: 8px;
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        @media (max-width: 700px) {
+            .hero {
+                padding: 38px 24px;
+            }
+
+            .card {
+                padding: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="topbar">
+        <button class="theme-toggle" id="themeToggle">
+            🌙 Dark Mode
+        </button>
+    </div>
+
+    <section class="hero">
+        <h1>Terms of Service</h1>
+
+        <p class="subtitle">
+            Welcome to <strong>Drink Water Reminder</strong>. These Terms of Service govern your use of the application, website, and related services provided by Nikhilesh Patve.
+        </p>
+
+        <div class="badge">
+            💧 Stay hydrated. Use responsibly.
+        </div>
+
+        <p class="effective-date">
+            Effective Date: May 14, 2026
+        </p>
+    </section>
+
+    <section class="card">
+        <h2>1. Acceptance of Terms</h2>
+
+        <p>
+            By downloading, accessing, or using Drink Water Reminder, you agree to be bound by these Terms of Service. If you do not agree with any part of these terms, please discontinue use of the application.
+        </p>
+    </section>
+
+    <section class="card">
+        <h2>2. About the App</h2>
+
+        <p>
+            Drink Water Reminder is designed to help users track hydration habits, schedule reminders, and maintain daily water intake goals.
+        </p>
+
+        <p>
+            The app may include free and premium features, advertisements, analytics tools, and account-based functionality.
+        </p>
+    </section>
+
+    <section class="card">
+        <h2>3. Eligibility</h2>
+
+        <p>
+            The app is intended for a general audience and may be used by individuals of all ages. If you are under the age required to consent under your local laws, you should use the app under parental or guardian supervision.
+        </p>
+    </section>
+
+    <section class="card">
+        <h2>4. User Accounts</h2>
+
+        <p>
+            Users may create or access accounts using:
+        </p>
+
+        <ul>
+            <li>Google Login</li>
+            <li>Facebook Login</li>
+            <li>Email-based Login</li>
+        </ul>
+
+        <p>
+            You are responsible for maintaining the confidentiality of your account credentials and for activities performed through your account.
+        </p>
+    </section>
+
+    <section class="card">
+        <h2>5. Data Collection & Privacy</h2>
+
+        <p>
+            The app may collect and process the following types of information:
+        </p>
+
+        <ul>
+            <li>Name and email address</li>
+            <li>Water intake and hydration-related data</li>
+            <li>Device information</li>
+            <li>Analytics and usage information</li>
+            <li>Crash reports and diagnostics</li>
+            <li>Advertising identifiers</li>
+        </ul>
+
+        <p>
+            Third-party services used in the app may include:
+        </p>
+
+        <ul>
+            <li>Google AdMob</li>
+            <li>Firebase Analytics</li>
+            <li>Firebase Crashlytics</li>
+        </ul>
+
+        <p>
+            Please also review the app's Privacy Policy for detailed information regarding how data is collected, used, stored, and protected.
+        </p>
+    </section>
+
+    <section class="card">
+        <h2>6. International Data Transfers</h2>
+
+        <p>
+            Some third-party services integrated into the app may process or store data on servers located outside India. By using the app, you acknowledge that your information may be transferred and processed in countries with different data protection laws.
+        </p>
+
+        <p>
+            Reasonable efforts are made to use reputable service providers that implement appropriate security and privacy safeguards.
+        </p>
+    </section>
+
+    <section class="card">
+        <h2>7. Subscriptions & Purchases</h2>
+
+        <p>
+            The app may offer:
+        </p>
+
+        <ul>
+            <li>One-time purchases</li>
+            <li>Premium subscriptions</li>
+        </ul>
+
+        <p>
+            Pricing, billing cycles, and subscription details may vary depending on your platform provider (such as Google Play).
+        </p>
+
+        <p>
+            Payments, cancellations, and refunds are generally handled through the platform store policies applicable to your purchase.
+        </p>
+    </section>
+
+    <section class="card">
+        <h2>8. Advertisements</h2>
+
+        <p>
+            The free version of the app may display third-party advertisements. These ads may be personalized using advertising identifiers and related technologies provided by advertising partners.
+        </p>
+    </section>
+
+    <section class="card">
+        <h2>9. Health & Medical Disclaimer</h2>
+
+        <p>
+            <span class="highlight">Drink Water Reminder is not a medical application.</span>
+        </p>
+
+        <p>
+            The app provides general wellness and hydration reminders only. It does not provide medical advice, diagnosis, treatment, or professional healthcare recommendations.
+        </p>
+
+        <p>
+            Users with medical conditions, hydration restrictions, kidney disorders, heart conditions, or other health concerns should consult a qualified healthcare professional before relying on hydration goals or reminders provided by the app.
+        </p>
+    </section>
+
+    <section class="card">
+        <h2>10. Reminder Reliability</h2>
+
+        <p>
+            Reminder delivery may depend on multiple device-specific factors outside the developer's control, including:
+        </p>
+
+        <ul>
+            <li>Battery optimization settings</li>
+            <li>Background process restrictions</li>
+            <li>Silent or focus modes</li>
+            <li>Notification permissions</li>
+            <li>Manufacturer customizations</li>
+            <li>Operating system limitations</li>
+        </ul>
+
+        <p>
+            The developer does not guarantee uninterrupted or perfectly timed reminder delivery on all devices.
+        </p>
+    </section>
+
+    <section class="card">
+        <h2>11. User Responsibilities</h2>
+
+        <p>
+            You agree not to:
+        </p>
+
+        <ul>
+            <li>Use the app for unlawful purposes</li>
+            <li>Attempt to reverse engineer or exploit the app</li>
+            <li>Interfere with app functionality or servers</li>
+            <li>Misuse account systems or authentication methods</li>
+        </ul>
+    </section>
+
+    <section class="card">
+        <h2>12. Intellectual Property</h2>
+
+        <p>
+            All app content, branding, design elements, source materials, graphics, and related intellectual property belong to Nikhilesh Patve unless otherwise stated.
+        </p>
+
+        <p>
+            Unauthorized copying, redistribution, or modification of app assets is prohibited.
+        </p>
+    </section>
+
+    <section class="card">
+        <h2>13. Limitation of Liability</h2>
+
+        <p>
+            To the maximum extent permitted by law, Nikhilesh Patve shall not be liable for:
+        </p>
+
+        <ul>
+            <li>Health-related outcomes</li>
+            <li>Missed reminders or notifications</li>
+            <li>Data loss</li>
+            <li>Service interruptions</li>
+            <li>Indirect or consequential damages</li>
+            <li>Device-specific functionality issues</li>
+        </ul>
+
+        <p>
+            Use of the app is at your own discretion and risk.
+        </p>
+    </section>
+
+    <section class="card">
+        <h2>14. Disclaimer of Warranties</h2>
+
+        <p>
+            The app is provided on an <strong>"as is"</strong> and <strong>"as available"</strong> basis without warranties of any kind, whether express or implied.
+        </p>
+
+        <p>
+            No guarantee is made regarding uninterrupted availability, accuracy, compatibility, or fitness for a particular purpose.
+        </p>
+    </section>
+
+    <section class="card">
+        <h2>15. Termination</h2>
+
+        <p>
+            Access to the app or certain features may be suspended or terminated at any time if misuse, abuse, fraud, or violations of these Terms are detected.
+        </p>
+    </section>
+
+    <section class="card">
+        <h2>16. Changes to These Terms</h2>
+
+        <p>
+            These Terms may be updated periodically to reflect legal, technical, or operational changes.
+        </p>
+
+        <p>
+            Continued use of the app after updates become effective constitutes acceptance of the revised Terms.
+        </p>
+    </section>
+
+    <section class="card">
+        <h2>17. Data Requests & User Rights</h2>
+
+        <p>
+            Users may request data-related assistance, corrections, or deletion requests by contacting:
+        </p>
+
+        <p>
+            📧 <a href="mailto:developerniks@gmail.com">developerniks@gmail.com</a>
+        </p>
+    </section>
+
+    <section class="card">
+        <h2>18. Governing Law</h2>
+
+        <p>
+            These Terms shall be governed by and interpreted in accordance with the laws of India.
+        </p>
+
+        <p>
+            Any disputes arising from the use of the app shall fall under the jurisdiction of courts located in Mumbai, India.
+        </p>
+    </section>
+
+    <section class="card">
+        <h2>19. Contact Information</h2>
+
+        <p>
+            Developer: <strong>Nikhilesh Patve</strong>
+        </p>
+
+        <p>
+            Email:
+            <a href="mailto:developerniks@gmail.com">
+                developerniks@gmail.com
+            </a>
+        </p>
+
+        <p>
+            Website:
+            <a href="https://developerniks-app.github.io/pages/WaterReminder/" target="_blank">
+                developerniks-app.github.io/pages/WaterReminder/
+            </a>
+        </p>
+    </section>
+
+    <div class="footer">
+        Made with 💧 for healthier hydration habits.
+    </div>
+
+</div>
+
+<script>
+    const toggle = document.getElementById("themeToggle");
+
+    function applyTheme(theme) {
+        if (theme === "dark") {
+            document.body.classList.add("dark");
+            toggle.innerHTML = "☀️ Light Mode";
+        } else {
+            document.body.classList.remove("dark");
+            toggle.innerHTML = "🌙 Dark Mode";
+        }
+    }
+
+    const savedTheme = localStorage.getItem("theme");
+
+    if (savedTheme) {
+        applyTheme(savedTheme);
+    } else {
+        const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        applyTheme(prefersDark ? "dark" : "light");
+    }
+
+    toggle.addEventListener("click", () => {
+        const isDark = document.body.classList.contains("dark");
+        const nextTheme = isDark ? "light" : "dark";
+
+        localStorage.setItem("theme", nextTheme);
+        applyTheme(nextTheme);
+    });
+</script>
+
+</body>
+</html>
