@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Drink Water Reminder</title>
+
+    <meta name="description" content="Drink Water Reminder helps you stay hydrated with smart reminders, intake tracking, and healthy hydration habits." />
+    <meta name="theme-color" content="#0ea5e9" />
+
+    <style>
+        :root {
+            --bg: #f4f8fb;
+            --card: #ffffff;
+            --text: #0f172a;
+            --muted: #475569;
+            --primary: #0ea5e9;
+            --secondary: #2563eb;
+            --border: #dbeafe;
+            --shadow: rgba(15, 23, 42, 0.08);
+        }
+
+        body.dark {
+            --bg: #020617;
+            --card: #0f172a;
+            --text: #e2e8f0;
+            --muted: #94a3b8;
+            --primary: #38bdf8;
+            --secondary: #60a5fa;
+            --border: #1e293b;
+            --shadow: rgba(0, 0, 0, 0.4);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: Inter, Arial, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            transition: background 0.25s ease, color 0.25s ease;
+        }
+
+        .container {
+            width: min(1100px, 92%);
+            margin: auto;
+        }
+
+        .topbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 22px 0;
+        }
+
+        .brand {
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: var(--primary);
+        }
+
+        .theme-toggle {
+            border: none;
+            background: var(--card);
+            color: var(--text);
+            padding: 10px 16px;
+            border-radius: 999px;
+            cursor: pointer;
+            font-weight: 600;
+            box-shadow: 0 10px 30px var(--shadow);
+        }
+
+        .hero {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 40px;
+            align-items: center;
+            padding: 50px 0 80px;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            line-height: 1.05;
+            margin: 0 0 20px;
+        }
+
+        .hero p {
+            color: var(--muted);
+            font-size: 1.08rem;
+            line-height: 1.8;
+            max-width: 650px;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: rgba(14, 165, 233, 0.12);
+            color: var(--primary);
+            padding: 10px 16px;
+            border-radius: 999px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .hero-card {
+            background: linear-gradient(135deg, #0ea5e9, #2563eb);
+            border-radius: 30px;
+            padding: 40px;
+            color: white;
+            min-height: 420px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 25px 60px rgba(37, 99, 235, 0.28);
+        }
+
+        .hero-card::after {
+            content: "💧";
+            position: absolute;
+            right: 20px;
+            bottom: -10px;
+            font-size: 160px;
+            opacity: 0.1;
+        }
+
+        .hero-card h2 {
+            margin-top: 0;
+            font-size: 2rem;
+        }
+
+        .hero-card p {
+            color: rgba(255,255,255,0.9);
+        }
+
+        .buttons {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+            margin-top: 28px;
+        }
+
+        .btn {
+            padding: 14px 22px;
+            border-radius: 14px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: transform 0.2s ease;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+        }
+
+        .btn-secondary {
+            background: var(--card);
+            color: var(--text);
+            border: 1px solid var(--border);
+        }
+
+        .features {
+            padding: 20px 0 70px;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 14px;
+        }
+
+        .section-subtitle {
+            color: var(--muted);
+            margin-bottom: 40px;
+            max-width: 700px;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 22px;
+        }
+
+        .feature-card {
+            background: var(--card);
+            border-radius: 24px;
+            padding: 26px;
+            border: 1px solid var(--border);
+            box-shadow: 0 10px 30px var(--shadow);
+        }
+
+        .feature-icon {
+            font-size: 2rem;
+            margin-bottom: 14px;
+        }
+
+        .feature-card h3 {
+            margin-top: 0;
+        }
+
+        .feature-card p {
+            color: var(--muted);
+        }
+
+        .links {
+            padding: 30px 0 80px;
+        }
+
+        .link-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 22px;
+        }
+
+        .link-card {
+            background: var(--card);
+            border-radius: 24px;
+            padding: 28px;
+            border: 1px solid var(--border);
+            text-decoration: none;
+            color: inherit;
+            box-shadow: 0 10px 30px var(--shadow);
+            transition: transform 0.2s ease;
+        }
+
+        .link-card:hover {
+            transform: translateY(-4px);
+        }
+
+        .link-card h3 {
+            margin-top: 0;
+            color: var(--primary);
+        }
+
+        .link-card p {
+            color: var(--muted);
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px 0 60px;
+            color: var(--muted);
+        }
+
+        @media (max-width: 850px) {
+            .hero {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-card {
+                min-height: unset;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="topbar">
+        <div class="brand">
+            💧 Drink Water Reminder
+        </div>
+
+        <button class="theme-toggle" id="themeToggle">
+            🌙 Dark Mode
+        </button>
+    </div>
+
+    <section class="hero">
+
+        <div>
+            <div class="hero-badge">
+                Smart hydration companion
+            </div>
+
+            <h1>
+                Tiny reminders.<br>
+                Big hydration energy.
+            </h1>
+
+            <p>
+                Drink Water Reminder helps you build healthier hydration habits with smart reminders, water intake tracking, progress insights, and customizable schedules designed for real daily life.
+            </p>
+
+            <div class="buttons">
+                <a class="btn btn-primary" href="https://play.google.com/" target="_blank">
+                    📲 Get the App
+                </a>
+
+                <a class="btn btn-secondary" href="#legal">
+                    📄 Legal & Policies
+                </a>
+            </div>
+        </div>
+
+        <div class="hero-card">
+            <h2>
+                Stay refreshed without turning your brain into a raisin 🥤
+            </h2>
+
+            <p>
+                Track your daily intake, receive gentle hydration nudges, and keep your water goals flowing across busy workdays, gaming marathons, gym sessions, and sleepy Sundays.
+            </p>
+        </div>
+
+    </section>
+
+    <section class="features">
+
+        <h2 class="section-title">
+            Features
+        </h2>
+
+        <p class="section-subtitle">
+            Built to make hydration tracking feel smooth, lightweight, and surprisingly satisfying.
+        </p>
+
+        <div class="feature-grid">
+
+            <div class="feature-card">
+                <div class="feature-icon">⏰</div>
+
+                <h3>Smart Reminders</h3>
+
+                <p>
+                    Custom reminder intervals designed to help you stay consistent throughout the day.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">📊</div>
+
+                <h3>Water Tracking</h3>
+
+                <p>
+                    Log daily water intake and monitor hydration progress with simple tracking tools.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">🎯</div>
+
+                <h3>Daily Goals</h3>
+
+                <p>
+                    Set personalized hydration targets based on your lifestyle and preferences.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">🌙</div>
+
+                <h3>Modern Experience</h3>
+
+                <p>
+                    Clean interface with support for both light and dark mode for comfortable use anytime.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="links" id="legal">
+
+        <h2 class="section-title">
+            Legal & Support
+        </h2>
+
+        <p class="section-subtitle">
+            Transparency keeps the hydration engine humming smoothly.
+        </p>
+
+        <div class="link-grid">
+
+            <a class="link-card" href="privacy-policy.html">
+                <h3>🔐 Privacy Policy</h3>
+
+                <p>
+                    Learn how user data, analytics, ads, and account information are handled.
+                </p>
+            </a>
+
+            <a class="link-card" href="terms-of-service.html">
+                <h3>📜 Terms of Service</h3>
+
+                <p>
+                    Review app usage terms, responsibilities, subscriptions, and disclaimers.
+                </p>
+            </a>
+
+            <a class="link-card" href="mailto:developerniks@gmail.com">
+                <h3>📧 Contact Support</h3>
+
+                <p>
+                    Need help, have feedback, or want to request data deletion? Reach out anytime.
+                </p>
+            </a>
+
+        </div>
+
+    </section>
+
+    <footer>
+        © 2026 Drink Water Reminder • Developed by Nikhilesh Patve
+    </footer>
+
+</div>
+
+<script>
+    const toggle = document.getElementById("themeToggle");
+
+    function applyTheme(theme) {
+        if (theme === "dark") {
+            document.body.classList.add("dark");
+            toggle.innerHTML = "☀️ Light Mode";
+        } else {
+            document.body.classList.remove("dark");
+            toggle.innerHTML = "🌙 Dark Mode";
+        }
+    }
+
+    const savedTheme = localStorage.getItem("theme");
+
+    if (savedTheme) {
+        applyTheme(savedTheme);
+    } else {
+        const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        applyTheme(prefersDark ? "dark" : "light");
+    }
+
+    toggle.addEventListener("click", () => {
+        const isDark = document.body.classList.contains("dark");
+        const nextTheme = isDark ? "light" : "dark";
+
+        localStorage.setItem("theme", nextTheme);
+        applyTheme(nextTheme);
+    });
+</script>
+
+</body>
+</html>
