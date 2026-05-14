@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Privacy Policy | Drink Water Reminder</title>
+
+    <meta name="description" content="Privacy Policy for Drink Water Reminder app by Nikhilesh Patve." />
+    <meta name="theme-color" content="#0ea5e9" />
+
+    <style>
+        :root {
+            --bg: #f4f8fb;
+            --card: #ffffff;
+            --text: #0f172a;
+            --muted: #475569;
+            --primary: #0ea5e9;
+            --border: #dbeafe;
+            --shadow: rgba(15, 23, 42, 0.08);
+        }
+
+        body.dark {
+            --bg: #020617;
+            --card: #0f172a;
+            --text: #e2e8f0;
+            --muted: #94a3b8;
+            --primary: #38bdf8;
+            --border: #1e293b;
+            --shadow: rgba(0, 0, 0, 0.4);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: Inter, Arial, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+            transition: background 0.25s ease, color 0.25s ease;
+        }
+
+        .container {
+            width: min(950px, 92%);
+            margin: auto;
+            padding: 40px 0 80px;
+        }
+
+        .topbar {
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 18px;
+        }
+
+        .theme-toggle {
+            border: none;
+            background: var(--card);
+            color: var(--text);
+            padding: 10px 16px;
+            border-radius: 999px;
+            cursor: pointer;
+            font-weight: 600;
+            box-shadow: 0 10px 30px var(--shadow);
+            transition: transform 0.2s ease;
+        }
+
+        .theme-toggle:hover {
+            transform: translateY(-2px);
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #0ea5e9, #2563eb);
+            color: white;
+            padding: 50px 35px;
+            border-radius: 24px;
+            box-shadow: 0 20px 50px rgba(37, 99, 235, 0.25);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::after {
+            content: "🔒";
+            position: absolute;
+            right: 25px;
+            top: 10px;
+            font-size: 90px;
+            opacity: 0.12;
+        }
+
+        h1 {
+            margin: 0 0 12px;
+            font-size: clamp(2rem, 5vw, 3.2rem);
+        }
+
+        .subtitle {
+            font-size: 1.05rem;
+            opacity: 0.95;
+            max-width: 700px;
+        }
+
+        .effective-date {
+            margin-top: 18px;
+            font-weight: 600;
+        }
+
+        .card {
+            background: var(--card);
+            border-radius: 22px;
+            padding: 32px;
+            margin-top: 24px;
+            border: 1px solid var(--border);
+            box-shadow: 0 10px 30px var(--shadow);
+        }
+
+        h2 {
+            margin-top: 0;
+            color: var(--primary);
+            font-size: 1.5rem;
+        }
+
+        p {
+            color: var(--muted);
+        }
+
+        ul {
+            color: var(--muted);
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            color: var(--muted);
+            font-size: 0.95rem;
+        }
+
+        .badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.15);
+            padding: 8px 14px;
+            border-radius: 999px;
+            margin-top: 16px;
+            font-size: 0.92rem;
+        }
+
+        .highlight {
+            background: rgba(14, 165, 233, 0.12);
+            padding: 2px 8px;
+            border-radius: 8px;
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        @media (max-width: 700px) {
+            .hero {
+                padding: 38px 24px;
+            }
+
+            .card {
+                padding: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="topbar">
+        <button class="theme-toggle" id="themeToggle">
+            🌙 Dark Mode
+        </button>
+    </div>
+
+    <section class="hero">
+        <h1>Privacy Policy</h1>
+
+        <p class="subtitle">
+            This Privacy Policy explains how Drink Water Reminder collects, uses, stores, and protects your information when you use the application and related services.
+        </p>
+
+        <div class="badge">
+            🔐 Your hydration data deserves a safe vault.
+        </div>
+
+        <p class="effective-date">
+            Effective Date: May 14, 2026
+        </p>
+    </section>
+
+    <section class="card">
+        <h2>1. Introduction</h2>
+
+        <p>
+            Drink Water Reminder is developed and operated by <strong>Nikhilesh Patve</strong>.
+        </p>
+
+        <p>
+            By using the app, you agree to the collection and use of information in accordance with this Privacy Policy.
+        </p>
+    </section>
+
+    <section class="card">
+        <h2>2. Information We Collect</h2>
+
+        <p>
+            Depending on how you use the app, the following information may be collected:
+        </p>
+
+        <ul>
+            <li>Name and email address</li>
+            <li>Hydration and water intake records</li>
+            <li>Device and operating system information</li>
+            <li>Advertising identifiers</li>
+            <li>Analytics and usage statistics</li>
+            <li>Crash logs and diagnostics data</li>
+            <li>Login-related account information</li>
+        </ul>
+    </section>
+
+    <section class="card">
+        <h2>3. Login & Authentication</h2>
+
+        <p>
+            Users may access the app using:
+        </p>
+
+        <ul>
+            <li>Google Login</li>
+            <li>Facebook Login</li>
+            <li>Email-based Login</li>
+        </ul>
+
+        <p>
+            Authentication providers may share limited account details such as your name, email address, and profile information according to their own privacy policies and your account settings.
+        </p>
+    </section>
+
+    <section class="card">
+        <h2>4. How We Use Information</h2>
+
+        <p>
+            Information collected through the app may be used to:
+        </p>
+
+        <ul>
+            <li>Provide hydration tracking and reminder functionality</li>
+            <li>Maintain and improve app performance</li>
+            <li>Analyze usage trends and app engagement</li>
+            <li>Fix crashes, bugs, and technical issues</li>
+            <li>Display advertisements</li>
+            <li>Provide premium features and purchases</li>
+            <li>Respond to user support requests</li>
+        </ul>
+    </section>
+
+    <section class="card">
+        <h2>5. Third-Party Services</h2>
+
+        <p>
+            The app may use third-party services that collect and process data on our behalf, including:
+        </p>
+
+        <ul>
+            <li>Google AdMob</li>
+            <li>Firebase Analytics</li>
+            <li>Firebase Crashlytics</li>
+        </ul>
+
+        <p>
+            These services may collect device identifiers, usage data, crash reports, and advertising-related information in accordance with their own privacy policies.
+        </p>
+    </section>
+
+    <section class="card">
+        <h2>6. Advertisements</h2>
+
+        <p>
+            The app may display personalized or non-personalized advertisements.
+        </p>
+
+        <p>
+            Advertising partners may use advertising identifiers and similar technologies to provide relevant ads and measure advertising performance.
+        </p>
+    </section>
+
+    <section class="card">
+        <h2>7. Subscriptions & Purchases</h2>
+
+        <p>
+            The app may provide one-time purchases and subscription-based premium features.
+        </p>
+
+        <p>
+            Billing and payment processing are managed through your platform provider, such as Google Play.
+        </p>
+
+        <p>
+            We do not directly store full payment card information.
+        </p>
+    </section>
+
+    <section class="card">
+        <h2>8. Health Information Disclaimer</h2>
+
+        <p>
+            <span class="highlight">Drink Water Reminder is not a medical or healthcare application.</span>
+        </p>
+
+        <p>
+            Water intake information entered into the app is intended for general wellness and habit tracking only and should not be treated as medical advice or diagnosis.
+        </p>
+    </section>
+
+    <section class="card">
+        <h2>9. Reminder Reliability</h2>
+
+        <p>
+            Reminder notifications may be affected by:
+        </p>
+
+        <ul>
+            <li>Battery optimization settings</li>
+            <li>Notification permissions</li>
+            <li>Silent or focus modes</li>
+            <li>Background process restrictions</li>
+            <li>Device manufacturer customizations</li>
+        </ul>
+
+        <p>
+            We cannot guarantee uninterrupted or perfectly timed reminder delivery on every device.
+        </p>
+    </section>
+
+    <section class="card">
+        <h2>10. Data Storage & Security</h2>
+
+        <p>
+            Reasonable administrative, technical, and security measures are used to help protect user information from unauthorized access, disclosure, or misuse.
+        </p>
+
+        <p>
+            However, no method of electronic storage or internet transmission is completely secure.
+        </p>
+    </section>
+
+    <section class="card">
+        <h2>11. International Data Transfers</h2>
+
+        <p>
+            Some third-party providers used by the app may process or store data on servers located outside India.
+        </p>
+
+        <p>
+            By using the app, you acknowledge that your information may be transferred to and processed in countries with different data protection laws.
+        </p>
+    </section>
+
+    <section class="card">
+        <h2>12. Children's Privacy</h2>
+
+        <p>
+            The app is intended for a general audience and is not knowingly designed to collect sensitive personal information from children without appropriate safeguards.
+        </p>
+
+        <p>
+            Parents or guardians who believe that a child has provided personal information may contact us for assistance.
+        </p>
+    </section>
+
+    <section class="card">
+        <h2>13. Your Rights & Choices</h2>
+
+        <p>
+            Depending on your location and applicable laws, you may have rights related to your personal information, including:
+        </p>
+
+        <ul>
+            <li>Requesting access to your information</li>
+            <li>Requesting corrections</li>
+            <li>Requesting deletion of your data</li>
+            <li>Managing ad personalization preferences</li>
+        </ul>
+
+        <p>
+            To make a request, contact:
+        </p>
+
+        <p>
+            📧 <a href="mailto:developerniks@gmail.com">developerniks@gmail.com</a>
+        </p>
+    </section>
+
+    <section class="card">
+        <h2>14. Data Retention</h2>
+
+        <p>
+            Information may be retained for as long as necessary to provide app functionality, comply with legal obligations, resolve disputes, or improve services.
+        </p>
+    </section>
+
+    <section class="card">
+        <h2>15. Changes to This Privacy Policy</h2>
+
+        <p>
+            This Privacy Policy may be updated periodically to reflect changes in legal requirements, technologies, or app functionality.
+        </p>
+
+        <p>
+            Updated versions will become effective once published within the app or website.
+        </p>
+    </section>
+
+    <section class="card">
+        <h2>16. Contact Information</h2>
+
+        <p>
+            Developer: <strong>Nikhilesh Patve</strong>
+        </p>
+
+        <p>
+            Email:
+            <a href="mailto:developerniks@gmail.com">
+                developerniks@gmail.com
+            </a>
+        </p>
+
+        <p>
+            Website:
+            <a href="https://developerniks-app.github.io/pages/WaterReminder/" target="_blank">
+                developerniks-app.github.io/pages/WaterReminder/
+            </a>
+        </p>
+    </section>
+
+    <div class="footer">
+        Privacy crafted with care, not duct tape and crossed fingers 🔐
+    </div>
+
+</div>
+
+<script>
+    const toggle = document.getElementById("themeToggle");
+
+    function applyTheme(theme) {
+        if (theme === "dark") {
+            document.body.classList.add("dark");
+            toggle.innerHTML = "☀️ Light Mode";
+        } else {
+            document.body.classList.remove("dark");
+            toggle.innerHTML = "🌙 Dark Mode";
+        }
+    }
+
+    const savedTheme = localStorage.getItem("theme");
+
+    if (savedTheme) {
+        applyTheme(savedTheme);
+    } else {
+        const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        applyTheme(prefersDark ? "dark" : "light");
+    }
+
+    toggle.addEventListener("click", () => {
+        const isDark = document.body.classList.contains("dark");
+        const nextTheme = isDark ? "light" : "dark";
+
+        localStorage.setItem("theme", nextTheme);
+        applyTheme(nextTheme);
+    });
+</script>
+
+</body>
+</html>
